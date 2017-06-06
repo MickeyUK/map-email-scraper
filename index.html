@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Search</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    
+		<!-- Search form -->
+		<div class="container">	
+			<div class="wrapper">
+				<div id="search-container">
+					<span class="icon-search"></span>
+					<input id="search" type="text" placeholder="Area to search" value="">
+				</div>
+				<div id="map"></div>
+        <div class="controls">
+          <button onclick="createPopup(list)"><span class="icon-list"></span> Text View</button>
+          <button onclick="downloadCSV(list)"><span class="icon-download3"></span> Download as CSV</button>
+        </div>
+			</div>
+		</div>
+		
+
+		<script>
+      // HUNTER.IO API KEY
+      // Get an API key here once you've signed up: https://hunter.io/api_keys
+      var hunter_key = "";
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    <!-- This links to the Google place library, needs API key -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+  </body>
+</html>
