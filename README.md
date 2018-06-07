@@ -4,7 +4,7 @@ This serves as an example template for using the [Google Places API](https://dev
 
 ## Google Places API Key
 
-To obtain an API key for the Google Places service, you will first need to log in to the [Google Developer Console](https://console.developers.google.com/). Next, you will need to create a project for the scraper. Once you've done that, select the **Library** tab and look for **Google Maps Javascript API**. Select that and then click **Enable**. You will then be prompted to set up the authentication process. Select API key and follow the instructions. Make a note of the generated API key.
+To obtain an API key for the Google Places service, you will first need to log in to the [Google Developer Console](https://console.developers.google.com/). Next, you will need to create a project for the scraper. Once you've done that, select the **Library** tab and look for **Google Maps Javascript API**. Select that and then click **Enable**. Select **Credentials**, click the **Create Credentials** button and select **API key** from the list. Make a note of the generated API key. You will also need to enable **Places API** on the **Library** tab.
 
 ## Hunter.io API Key
 
