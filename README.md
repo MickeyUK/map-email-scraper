@@ -32,4 +32,4 @@ You can click a marker on the map to view information on that location. If e-mai
 
 ## More Features
 
-I regularly I am asked to add more features to this, such as returning more results, but this is primarily to serve as an example of my abilities for my portfolio. If you would like to discuss hiring me to add more features, please shoot me an e-mail (you can find my e-mail address on my profile page). Thanks!
+I regularly am asked to add more features to this, such as returning more results, but this is primarily to serve as an example of my abilities for my portfolio. If you would like to discuss hiring me to add more features, please shoot me an e-mail (you can find my e-mail address on my profile page). Thanks!
