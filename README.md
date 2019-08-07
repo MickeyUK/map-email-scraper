@@ -29,3 +29,7 @@ To use the scraper, type business/service queries and the location, like this:
     spas in york
 
 You can click a marker on the map to view information on that location. If e-mail addresses exist in the hunter.io database for that location, they will come up. You can see the markers in text form by selecting **Text View**. You can download the places in CSV (Comma Seperated Values) format, making it easy to import into tables and databases.
+
+## More Features
+
+I regularly I am asked to add more features to this, such as returning more results, but this is primarily to serve as an example of my abilities for my portfolio. If you would like to discuss hiring me to add more features, please shoot me an e-mail (you can find my e-mail address on my profile page). Thanks!
