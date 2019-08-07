@@ -14,11 +14,15 @@ Once you have created an account with [hunter.io](https://hunter.io/), go to you
 
 You will need to make 2 changes to the **index.html** file. On **line 35** is where you enter your Google Places API key, inside the quotes:
 
-    var google_key = "YOUR_KEY_HERE";
+```js
+var google_key = "YOUR_KEY_HERE";
+```
 
 On **line 39** is where you enter your hunter.io API key, inside the quotes:
 
-    var hunter_key = "YOUR_KEY_HERE";
+```js
+var hunter_key = "YOUR_KEY_HERE";
+```
 
 ## Using the Scraper
 
