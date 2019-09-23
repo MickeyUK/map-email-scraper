@@ -6,7 +6,7 @@ This serves as an example template for using the [Google Places API](https://dev
 
 To obtain an API key for the Google Places service, you will first need to log in to the [Google Cloud Platform](https://console.cloud.google.com/). Next, you will need to create a project for the scraper. Once you've done that, select the **Library** tab and look for **Google Maps Javascript API**. Select that and then click **Enable**. Select **Credentials**, click the **Create Credentials** button and select **API key** from the list. Make a note of the generated API key. You will also need to enable **Places API** on the **Library** tab.
 
-The Google Maps API has now switched to a freemium model, which means the **Billing API** needs to be enabled in the https://console.cloud.google.com/ has well.
+The Google Maps API has now switched to a freemium model, which means the **Billing API** needs to be enabled in the https://console.cloud.google.com/ as well.
 
 ## Hunter.io API Key
 
