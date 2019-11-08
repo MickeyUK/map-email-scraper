@@ -10,26 +10,28 @@ h2 {
 }
 
 .wrapper {
-    width: 1024px;
+    width: 90%;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
 #search-container { position: relative; }
+
 #search-container .icon-search { 
-  position: absolute;
-  top: 10px;
-  right: -14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #search {
-    width: 996px;
+    width: 100%;
     padding: 10px;
-    padding-right: 50px;
+    box-sizing: border-box;
+    padding-right: 40px;
 }
 
 #map {
-    width: 103.33%;
     height: 500px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -52,6 +54,14 @@ button {
 .title {
     color: #9a9a9a;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 375px) {
+    button {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+    }
 }
 
 /* Icons */
