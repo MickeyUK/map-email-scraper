@@ -2,6 +2,8 @@
 
 This serves as an example template for using the [Google Places API](https://developers.google.com/places/) and [Hunter.io](http://hunter.io) for collating business information quickly. To use this you will need to obtain private API keys for these services.
 
+You can see it in action [here](https://mickeyuk.github.io/projects/places-scraper).
+
 ## Google Places API Key
 
 To obtain an API key for the Google Places service, you will first need to log in to the [Google Cloud Platform](https://console.cloud.google.com/). Next, you will need to create a project for the scraper. Once you've done that, select the **Library** tab and look for **Google Maps Javascript API**. Select that and then click **Enable**. Select **Credentials**, click the **Create Credentials** button and select **API key** from the list. Make a note of the generated API key. You will also need to enable **Places API** on the **Library** tab.
