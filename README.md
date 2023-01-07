@@ -1,43 +1,82 @@
-# Places Scraper
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <img src="github/logo_blue.png">
 
-This serves as an example template for using the [Google Places API](https://developers.google.com/places/) and [Hunter.io](http://hunter.io) for collating business information quickly. To use this you will need to obtain private API keys for these services.
+  <p align="center">
+    Open source tool for collating business contact info
+    <br />
+    <a href="https://github.com/MickeyUK/map-email-scraper/releases">Latest Release</a>
+    ·
+    <a href="https://github.com/MickeyUK/map-email-scraper/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/MickeyUK/map-email-scraper/issues">Request Feature</a>
+  </p>
+</p>
 
-You can see it in action [here](https://mickeyuk.github.io/projects/places-scraper).
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#chat-commands">Chat Commands</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-## Google Places API Key
 
-To obtain an API key for the Google Places service, you will first need to log in to the [Google Cloud Platform](https://console.cloud.google.com/). Next, you will need to create a project for the scraper. Once you've done that, select the **Library** tab and look for **Google Maps Javascript API**. Select that and then click **Enable**. Select **Credentials**, click the **Create Credentials** button and select **API key** from the list. Make a note of the generated API key. You will also need to enable **Places API** on the **Library** tab.
+## About the Project
 
-The Google Maps API has now switched to a freemium model, which means the **Billing API** needs to be enabled in the https://console.cloud.google.com/ as well.
+This is a standalone application that uses Google Maps and Hunter.io for collating business contact information.
 
-## Hunter.io API Key
+By default Google search does not show e-mail contact information for establishments, so this tool cross references results with Hunter.io to find any associated public e-mail addresses. 
 
-Once you have created an account with [hunter.io](https://hunter.io/), go to your dashboard and select **API**. Make a note of the API key (you might have to click the **Generate a new key** button).
+Map E-Mail Scraper is a useful tool for people generating leads, and is not intended to be used maliciously. Use responsibly folks!
 
-## Adding Keys to the Scraper
+## Features
 
-You will need to make 2 changes to the **index.html** file. On **line 35** is where you enter your Google Places API key, inside the quotes:
+  * **Create Multiple Query Collections**
 
-```js
-var google_key = "YOUR_KEY_HERE";
-```
+  Create multiple search queries and store them in collections for future use.
 
-On **line 39** is where you enter your hunter.io API key, inside the quotes:
+  * **Export Results**
 
-```js
-var hunter_key = "YOUR_KEY_HERE";
-```
+  Search results can be exported to various formats or formatted to printer friendly format.
 
-## Using the Scraper
+## Contributing
 
-To use the scraper, type business/service queries and the location, like this:
+See the [open issues](https://github.com/MickeyUK/map-email-scraper/issues) for a list of proposed features (and known issues).
 
-    restaurants in London
-    supermarkets in Manchester
-    spas in york
+Would you like to contribute to the project? That's great! Here's what you do:
 
-You can click a marker on the map to view information on that location. If e-mail addresses exist in the hunter.io database for that location, they will come up. You can see the markers in text form by selecting **Text View**. You can download the places in CSV (Comma Seperated Values) format, making it easy to import into tables and databases.
 
-## More Features
+1. Open a new issue reporting what you're going to do.
+2. Fork this repository.
+3. Create a branch for your feature.
+4. Make your local changes.
+5. Submit a pull request.
 
-I regularly am asked to add more features to this, such as returning more results, but this is primarily to serve as an example of my abilities for my portfolio. If you would like to discuss hiring me to add more features, please shoot me an e-mail (you can find my e-mail address on my profile page). Thanks!
+If this is useful to you and you'd like to <a href="https://ko-fi.com/mickeyuk">buy me a coffee</a> as thanks, I won't say no!
+
+## License
+
+See `LICENSE.txt` for more information.
+
+
+## Contact
+
+
+Project Link: [https://github.com/MickeyUK/map-email-scraper](https://github.com/MickeyUK/map-email-scraper)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [MickeyUK] - [GitHub](https://github.com/MickeyUK)

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'PublicSans';
+    src: url('../fonts/PublicSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesomeSolid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesomeBrands';
+    src: url('../fonts/FontAwesomeBrands.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+smalltext,
+smalltext a {
+    color: #FFF !important;
+    font-size: 12px;
+    opacity: .7;
+    text-align: center;
+}

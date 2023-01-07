@@ -1,0 +1,92 @@
+#sidebar {
+    flex: 0 0 300px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+    z-index: 600;
+    overflow-y: auto;
+    height: calc(100vh - 73px);
+    background-color: $c_secondary;
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 12px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: $c_primary;
+    border: 3px solid $c_primary;
+}
+
+#sidebar .button:hover {
+    background-color: $c_primary;
+}
+
+.collection {
+    padding: 16px;
+    padding-top: 26px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    opacity: .7;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: .2s all ease-in-out;
+    position: relative;
+    color: $c_white;
+}
+
+.collection-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.collection:hover {
+    background: $c_primary;
+    transition: .2s all ease-in-out;
+}
+
+.collection.active {
+    background: $c_primary;
+    opacity: 1;
+}
+
+.collection-delete {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    z-index: 700;
+    width: 32px;
+    height: 32px;
+    text-align: right;
+}
+
+.collection-delete:hover {
+    color: $c_secondary;
+    transition: .2s all ease-in-out;
+}
+
+.collection-delete::before {
+    content: "\f1f8";
+    font-family: 'FontAwesome';
+}
+
+.collection-label {
+    font-size: 11px;
+    opacity: .7;
+}
+
+#collection-add-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}

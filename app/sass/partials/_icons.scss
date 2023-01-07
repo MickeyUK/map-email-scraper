@@ -1,0 +1,45 @@
+.icon::before {
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    color: rgb(161, 161, 161);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'FontAwesome';
+}
+
+.field .icon::before {
+    position: absolute;
+}
+
+.shop-icon::before {
+    content: "\f1ad";
+}
+
+.search-icon::before {
+    content: "\f002";
+}
+
+.menu-icon::before {
+    content: "\f0c9";
+    color: $c_white;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-icon:hover::before {
+    color: $c_secondary;
+    transition: all 0.2s ease-in-out;
+}
+
+.google-icon::before {
+    font-family: 'FontAwesomeBrands';
+    content: "\f1a0";
+}
+
+.email-icon::before {
+    font-family: 'FontAwesome';
+    content: "\f0e0";
+}

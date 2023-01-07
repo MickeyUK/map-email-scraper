@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="
+    script-src 'self' 'unsafe-inline' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com https://api.hunter.io blob:;
+    img-src 'self' https://*.googleapis.com https://*.gstatic.com https://*.googleusercontent.com *.google.com  *.googleusercontent.com data:;
+    frame-src *.google.com;
+    connect-src 'self' https://*.googleapis.com *.google.com https://*.gstatic.com https://api.hunter.io data: blob:;
+    font-src 'self' https://fonts.gstatic.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    worker-src blob:;
+    ">
+    <title>Map E-Mail Scraper</title>
+
+    <link nonce="emailmapscraper" rel="stylesheet" href="css/main.css">
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="#">
+  </head>
+  <body>
+
+    <div id="setup">
+
+      <form class="setup-form" onsubmit="setup()">
+        <img src="img/logo_white.png" class="setup-logo">
+
+        <div class="field">
+          <div class="icon google-icon"></div>
+          <input id="google-field" type="password" class="input input-business" placeholder="Google API Key" autocomplete="off">
+          <smalltext>*Required</smalltext>
+        </div>
+
+        <div class="field">
+          <div class="icon email-icon"></div>
+          <input id="hunter-field" type="password" class="input input-business" placeholder="Hunter.io API Key" autocomplete="off">
+          <smalltext>Optional</smalltext>
+        </div>
+
+        <input type="submit" id="setup-button" class="button" value="Save">
+
+        <smalltext>For instructions follow the guide at<br>
+          <a target="_blank" href="https://github.com/mickeyuk/map-email-scraper/wiki">https://github.com/mickeyuk/map-email-scraper/wiki</a>
+        </smalltext>
+
+      </form>
+
+    </div>
+    
+    <div id="app">
+
+      <div id="header" class="app-bar bg-primary">
+
+        <!-- Search Form -->
+        <form id="search-form" onsubmit="event.preventDefault(); newSearch();" autocomplete="off">
+
+          <div class="field">
+            <div class="icon shop-icon"></div>
+            <input id="business-field" type="text" class="input input-business" placeholder="Looking for" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <div class="icon search-icon"></div>
+            <input id="search-field" type="text" class="input input-location" placeholder="Location" autocomplete="off">
+          </div>
+
+          <div class="slider-field">
+            <div id="slider-label" class="slider-label">Radius: <span id="slider-value"></span> m</div>
+            <div class="slider">
+              <input type="range" value="100" min="1" max="100" step="1" class="progress" oninput="onRadiusChange()">
+            </div>
+          </div>
+
+          <input type="submit" id="search-button" class="button" value="Search">
+
+        </form>
+        <!-- Search Form -->
+
+        <div id="menu">
+          <div class="icon menu-icon" onclick="toggleDropdown(this, 'menu-options');">
+            <div id="menu-options" class="dropdown-menu">
+              <div onclick="toggleSetup();">First Time Setup</div>
+              <a href="https://github.com/mickeyuk/map-email-scraper/wiki" target="_blank">Help</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main app window -->
+      <div id="main">
+        
+        <div id="sidebar" class="bg-secondary">
+        
+          <div id="collections"></div>
+
+          <div id="collection-add-container">
+            <div id="collection-add" class="button" onclick="createCollection()">Add Collection</div>
+          </div>
+
+        </div>
+
+        <div id="results-container">
+          <div id="results-header">
+            <div class="results-filter pill-nav">
+              <div id="pill-map" class="pill active" onclick="viewMap()">Map</div>
+              <div id="pill-list" class="pill" onclick="viewList()">List</div>
+            </div>
+            <div class="export-nav pill-nav">
+              <div id="pill-export" class="pill" onclick="toggleDropdown(this, 'export-options');">Export to...</div>
+              <div id="export-options" class="dropdown-menu">
+                <div onclick="exportCSV();">Export to CSV</div>
+                <div onclick="exportJSON();">Export to JSON</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="results-body">
+            <div id="results-map" class="active"></div>
+            <div id="results-list">
+
+              <div id="results-list-container">
+ 
+                <div id="results-list-table">
+                  <div id="results-list-page-0" class="results-list-page active"></div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div id="results-footer" class="pill-nav">
+
+            <div class="results-count">
+              <span id="results-count-number">0</span>
+              <span class="results-count-text">Results</span>
+            </div>
+
+            <div id="results-pagination">
+              <div id="page-buttons">
+                <div class="page-button pill active">1</div>
+                <div class="page-button pill">2</div>
+                <div class="page-button pill">3</div>
+              </div>
+            </div>
+
+            <div class="pages-count">
+              <span class="pages-count-text">Page </span>
+              <span id="page-current">1</span>
+              <span class="pages-count-text"> of </span>
+              <span id="page-total">10</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- Main app window -->
+
+      <!-- Overlay -->
+      <div id="overlay">
+
+        <div id="overlay-loading">
+          <div class="app-loading-icon">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+          </div>
+          <div class="app-loading-text">Searching</div>
+          <div id="overlay-loading-progress">
+            <div id="overlay-loading-fill" style="width:0"></div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Overlay -->
+
+    </div>
+
+    <script nonce="emailmapscraper" src="data/categories.js"></script>
+    <script nonce="emailmapscraper" src="js/autocomplete.js"></script>
+    <script nonce="emailmapscraper" src="js/app.js"></script>
+    <!--<script nonce="emailmapscraper" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsaPZ6g27_m12wCSAnN5LsjAP_-4ntiU&libraries=places&callback=initApp"></script>-->
+    <script>init();</script>
+  </body>
+</html>

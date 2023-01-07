@@ -1,0 +1,92 @@
+.field {
+    position: relative;
+    flex: 1;
+}
+
+.field smalltext {
+    margin-top: 5px;
+}
+
+.input {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 0;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    background-color: rgb(250, 250, 250);
+    font-family: 'PublicSans', sans-serif;
+    padding-left: 40px;
+    height: 100%;
+    transition: .2s all ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: .2s all ease-in-out;
+}
+
+.input[type="text"],
+.input[type="password"] {
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: rgb(20, 20, 20);
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    background-color: $c_primary;
+    color: #FFF;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+.slider-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.slider-label {
+    font-size: 14px;
+}
+
+.progress {
+    background: linear-gradient(to right, #FFF 0%, #FFF 100%, rgb(0, 120, 215) 100%, rgb(0, 120, 215) 100%);
+    border: solid 2px #FFF;
+    height: 8px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #FFF;
+    box-shadow: 0 0 2px #000;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}

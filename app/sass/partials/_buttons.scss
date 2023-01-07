@@ -1,0 +1,78 @@
+.button {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 0;
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+    background-color: rgb(250, 250, 250);
+    font-family: 'PublicSans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.pill-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 5px;
+    position: relative;
+}
+
+.pill {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+    background-color: rgb(255, 255, 255);
+    font-family: 'PublicSans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover,
+.pill:hover {
+    background-color: $c_secondary;
+    border-color: $c_secondary;
+    color: rgb(250, 250, 250);
+    transition: all 0.2s ease-in-out;
+}
+
+.pill.active {
+    background-color: $c_primary;
+    border-color: $c_primary;
+    color: rgb(250, 250, 250);
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: flex;
+    position: absolute;
+    width: 250px;
+    flex-direction: column;
+    background: $c_white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    top: 45px;
+    right: 5px;
+}
+
+.dropdown-menu div,
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown-menu div:hover,
+.dropdown-menu a:hover {
+    background-color: $c_primary;
+    color: #FFF;
+}
