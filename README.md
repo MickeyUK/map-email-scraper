@@ -33,7 +33,7 @@
 
 ## About the Project
 
-This is a standalone application that uses Google Maps and Hunter.io for collating business contact information.
+This is a standalone application that uses Google Maps and <a href="#features">Hunter.io</a> for collating business contact information.
 
 By default Google search does not show e-mail contact information for establishments, so this tool cross references results with Hunter.io to find any associated public e-mail addresses. 
 
@@ -47,7 +47,7 @@ Map E-Mail Scraper is a useful tool for people generating leads, and is not inte
 
   * **Export Results**
 
-  Search results can be exported to various formats or formatted to printer friendly format.
+  Search results can be exported to various formats.
 
 ## Contributing
 
