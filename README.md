@@ -62,7 +62,7 @@ Would you like to contribute to the project? That's great! Here's what you do:
 4. Make your local changes.
 5. Submit a pull request.
 
-If this is useful to you and you'd like to <a href="https://ko-fi.com/mickeyuk">buy me a coffee</a> as thanks, or follow this referral link when creating an account with <a href="https://hunter.io?via=mickeyuk">Hunter.io</a>.
+If this is useful to you and you'd like to thank me, you could <a href="https://ko-fi.com/mickeyuk">buy me a coffee</a> or follow this referral link when creating an account with <a href="https://hunter.io?via=mickeyuk">Hunter.io</a>.
 
 ## License
 
