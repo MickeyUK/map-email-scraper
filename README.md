@@ -33,7 +33,7 @@
 
 ## About the Project
 
-This is a standalone application that uses Google Maps and <a href="#features">Hunter.io</a> for collating business contact information.
+This is a standalone application that uses Google Maps and <a href="https://hunter.io?via=mickeyuk">Hunter.io</a> for collating business contact information.
 
 By default Google search does not show e-mail contact information for establishments, so this tool cross references results with Hunter.io to find any associated public e-mail addresses. 
 
@@ -62,7 +62,7 @@ Would you like to contribute to the project? That's great! Here's what you do:
 4. Make your local changes.
 5. Submit a pull request.
 
-If this is useful to you and you'd like to <a href="https://ko-fi.com/mickeyuk">buy me a coffee</a> as thanks, I won't say no!
+If this is useful to you and you'd like to <a href="https://ko-fi.com/mickeyuk">buy me a coffee</a> as thanks, or follow this referral link when creating an account with <a href="https://hunter.io?via=mickeyuk">Hunter.io</a>.
 
 ## License
 
